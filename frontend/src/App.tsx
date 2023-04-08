@@ -3,5 +3,5 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 export default function App() {
-  return;
+  return <div></div>;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Root from "./routes/Root";
+import Root from "./routes/Root/Root";
 import Country from "./routes/Country";
 import "./styles/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";

@@ -1,25 +1,16 @@
 import magnifyingGlassSvg from "../../assets/magnifyingGlass.svg";
-import countries from "../../assets/countryNames.json";
 
 import styles from "./Search.module.css";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import getNewShownCountries from "./func/getNewShownCountires";
-
-function onChange(e: FormEvent) {
-  if (!e.target) {
-    console.error("e.target is null");
-    return;
-  }
-  const input = e.target.value;
-}
 
 export default function Search() {
   const [searchInput, setSearchInput] = useState("");
-  const [shownCountries, setShownCountries] = useState<string[]>([]);
+  const [shownCountries, setShownCountries] = useState<Country[]>([]);
 
   return (
-    <div>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles.inputContainer}>
         <img
           src={magnifyingGlassSvg}
           alt="magnifying glass"
@@ -31,16 +22,17 @@ export default function Search() {
             const input = e.currentTarget.value;
             setSearchInput(input);
             const newShownCountires = getNewShownCountries(input);
-            console.log(newShownCountires);
             setShownCountries(newShownCountires);
           }}
           placeholder="country..."
           className={styles.input}
         />
       </div>
-      <ul>
-        {shownCountries.map((country) => (
-          <li key={country}>{country}</li>
+      <ul className={styles.list}>
+        {shownCountries.map(({ name, flag }) => (
+          <li key={flag}>
+            <span className={styles.flag}>{flag}</span> {name}
+          </li>
         ))}
       </ul>
     </div>

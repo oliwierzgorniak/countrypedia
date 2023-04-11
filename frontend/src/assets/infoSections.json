@@ -1,0 +1,23 @@
+[
+  {
+    "title": {
+      "text": "Geography",
+      "emoji": "🌍"
+    },
+    "infoKeys": ["Capital", "Continent", "Area"]
+  },
+  {
+    "title": {
+      "text": "People",
+      "emoji": "👨‍👩‍👧‍👦"
+    },
+    "infoKeys": ["Language", "Population", "Gini"]
+  },
+  {
+    "title": {
+      "text": "Other",
+      "emoji": "‍📦"
+    },
+    "infoKeys": ["TLD", "Car side", "Currency"]
+  }
+]

@@ -26,29 +26,3 @@
 .input:focus {
   outline: none;
 }
-
-.list {
-  padding: 0;
-  margin: 0;
-  margin-top: -0.2em;
-  overflow-y: scroll;
-}
-
-.list li:first-child {
-  padding-top: calc(1em + 0.2em); /* adding space after moving ul up */
-}
-
-.list li {
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-  list-style-type: none;
-  border: 1px solid #171717;
-  border-top: none;
-  padding: 1em;
-}
-
-.flag {
-  font-size: 1.5rem;
-  margin-top: -0.1em;
-}

@@ -1,15 +1,30 @@
 import magnifyingGlassSvg from "../../assets/magnifyingGlass.svg";
-
 import styles from "./Search.module.css";
 import { useState } from "react";
 import getNewShownCountries from "./func/getNewShownCountires";
+import List from "../List/List";
+import { N_LIST_ELEMENTS } from "../../consts";
+import { useNavigate } from "react-router-dom";
+import handleEnter from "./func/handleEnter";
+import handleArrowsAndGetIndex from "./func/handleArrowsAngGetIndex";
 
 export default function Search() {
   const [searchInput, setSearchInput] = useState("");
   const [shownCountries, setShownCountries] = useState<Country[]>([]);
+  const [selectedElement, setSelectedElement] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   return (
-    <div className={styles.container}>
+    <div
+      onKeyDown={(e) => {
+        handleEnter(e.code, selectedElement, shownCountries, navigate);
+        const index = handleArrowsAndGetIndex(e.code, selectedElement);
+
+        if (typeof index !== "undefined")
+          setSelectedElement(index % N_LIST_ELEMENTS);
+      }}
+      className={styles.container}
+    >
       <div className={styles.inputContainer}>
         <img
           src={magnifyingGlassSvg}
@@ -28,13 +43,7 @@ export default function Search() {
           className={styles.input}
         />
       </div>
-      <ul className={styles.list}>
-        {shownCountries.map(({ name, flag }) => (
-          <li key={flag}>
-            <span className={styles.flag}>{flag}</span> {name}
-          </li>
-        ))}
-      </ul>
+      <List shownCountries={shownCountries} selectedElement={selectedElement} />
     </div>
   );
 }

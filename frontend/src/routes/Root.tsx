@@ -1,10 +1,10 @@
-import LogoSvg from "../assets/logo.svg";
+import logoSvg from "../assets/logo.svg";
 import Search from "../components/Search/Search";
 
 export default function Root() {
   return (
     <main>
-      <LogoSvg />
+      <img src={logoSvg} alt="" />
       <Search />
     </main>
   );

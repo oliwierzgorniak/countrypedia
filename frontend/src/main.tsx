@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import Root from "./routes/Root";
 import Country from "./routes/Country";
-import "./index.css";
+import "./styles/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Root />,
   },
   {
     path: "country/:country",

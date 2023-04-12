@@ -17,6 +17,11 @@ app.get("/", async (req, res) => {
   const dataReq = await fetch(url);
   const data = await dataReq.json();
 
+  if (data.status === 404) {
+    res.status(404).end("no country found");
+    return;
+  }
+
   res.json(parseData(data));
   return;
 });

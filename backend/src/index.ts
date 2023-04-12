@@ -1,8 +1,10 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 import express from "express";
+import cors from "cors";
 import parseData from "./lib/parseData";
 const app = express();
+app.use(cors());
 
 app.get("/", async (req, res) => {
   const country = req.query.country;

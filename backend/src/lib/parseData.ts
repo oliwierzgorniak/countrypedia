@@ -6,7 +6,7 @@ export default function parseData(data: any) {
 
   return {
     Geography: {
-      Capital: obj.capital,
+      Capital: obj.capital[0],
       Region: obj.region,
       Area: obj.area,
     },
@@ -16,7 +16,7 @@ export default function parseData(data: any) {
       Gini: obj.gini,
     },
     Other: {
-      TLD: obj.tld,
+      TLD: obj.tld[0],
       "Driving side": obj.car.side,
       Currency: currency,
     },

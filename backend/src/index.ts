@@ -1,6 +1,7 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 import express from "express";
+import parseData from "./lib/parseData";
 const app = express();
 
 app.get("/", async (req, res) => {
@@ -14,7 +15,7 @@ app.get("/", async (req, res) => {
   const dataReq = await fetch(url);
   const data = await dataReq.json();
 
-  res.json(data);
+  res.json(parseData(data));
   return;
 });
 

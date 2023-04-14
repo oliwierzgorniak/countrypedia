@@ -4,7 +4,7 @@
       "text": "Geography",
       "emoji": "🌍"
     },
-    "infoKeys": ["Capital", "Region", "Area"]
+    "infoKeys": ["Region", "Area", "Capital"]
   },
   {
     "title": {

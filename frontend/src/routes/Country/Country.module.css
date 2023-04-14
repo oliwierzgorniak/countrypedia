@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+  margin-bottom: 1.3em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.2em 2em;
+}

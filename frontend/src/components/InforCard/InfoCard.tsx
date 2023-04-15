@@ -1,4 +1,5 @@
 import styles from "./InfoCard.module.css";
+import addSpacesNumber from "./func/addSpacesNumber";
 
 type InfoCardProps = {
   title: CardTitle;
@@ -16,7 +17,9 @@ export default function InfoCard({ title, infoKeys, data }: InfoCardProps) {
         {infoKeys.map((key) => (
           <li key={key}>
             <span className={styles.key}>{key}: </span>
-            <span className={styles.information}>{data[key]}</span>
+            <span className={styles.information}>
+              {addSpacesNumber(data[key])}
+            </span>
           </li>
         ))}
       </ul>

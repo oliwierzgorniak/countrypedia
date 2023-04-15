@@ -4,7 +4,6 @@ export default function getApiUrl(name: string) {
 
   if (typeof url !== "string" || typeof param !== "string") {
     throw new Error(".env variables not available");
-    return;
   }
 
   return `${process.env.API_URL}${name}${process.env.API_PARAM}`;

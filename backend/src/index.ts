@@ -20,8 +20,15 @@ app.get("/", async (req, res) => {
     return;
   }
 
-  const dataReq = await fetch(apiUrl);
-  const data = await dataReq.json();
+  let data;
+  try {
+    const dataReq = await fetch(apiUrl);
+    data = await dataReq.json();
+  } catch (err) {
+    console.error(err);
+    res.status(500).end("server error");
+    return;
+  }
 
   if (data.status === 404) {
     res.status(404).end("no country found");

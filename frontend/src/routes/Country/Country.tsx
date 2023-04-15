@@ -5,6 +5,7 @@ import { SERVER_URL } from "../../consts";
 import InfoCard from "../../components/InforCard/InfoCard";
 import sections from "../../assets/infoSections.json";
 import styles from "./Country.module.css";
+import Back from "../../components/Back/Back";
 
 export default function Root() {
   const { country } = useParams();
@@ -23,9 +24,9 @@ export default function Root() {
 
   return country ? (
     <>
+      <Back />
       <h1>
-        {country}
-        {getFlag(country)}
+        {country} {getFlag(country)}
       </h1>
 
       <article className={styles.container}>

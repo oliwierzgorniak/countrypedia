@@ -2,19 +2,25 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import cors from "cors";
-import parseData from "./lib/parseData";
+import getParsedData from "./lib/getParsedData";
+import getApiUrl from "./lib/getApiUrl";
 const app = express();
 app.use(cors());
 
 app.get("/", async (req, res) => {
   const country = req.query.country;
-  if (typeof country === "undefined") {
+  if (typeof country !== "string") {
     res.status(400).end("no country provided");
     return;
   }
 
-  const url = `https://restcountries.com/v3.1/name/${country}?fullText=true`;
-  const dataReq = await fetch(url);
+  const apiUrl = getApiUrl(country);
+  if (typeof apiUrl !== "string") {
+    res.status(500).end("server error");
+    return;
+  }
+
+  const dataReq = await fetch(apiUrl);
   const data = await dataReq.json();
 
   if (data.status === 404) {
@@ -22,7 +28,7 @@ app.get("/", async (req, res) => {
     return;
   }
 
-  res.json(parseData(data));
+  res.json(getParsedData(data));
   return;
 });
 

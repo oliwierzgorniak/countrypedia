@@ -1,4 +1,4 @@
-export default function parseData(data: any) {
+export default function getParsedData(data: any) {
   const obj = data[0];
   const language = Object.values(obj.languages)[0];
   // @ts-ignore

@@ -4,16 +4,16 @@
   border-radius: 0.4em;
 }
 
-h2 {
+.card h2 {
   /* text-align: center; */
   margin-top: 0;
 }
 
-ul {
+.card ul {
   padding-left: 0;
 }
 
-li {
+.card li {
   list-style: none;
   margin-bottom: 0.2em;
   max-width: 20ch;
@@ -26,4 +26,18 @@ li {
 
 .information {
   word-break: break-all;
+}
+
+@media screen and (max-width: 512px) {
+  .card {
+    padding: 1.5em;
+  }
+
+  .card h2 {
+    font-size: 1.25rem;
+  }
+
+  .card li {
+    font-size: 0.92rem;
+  }
 }

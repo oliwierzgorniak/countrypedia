@@ -1,5 +1,6 @@
 .container {
-  margin-right: 1.3em;
+  margin-left: 2em;
+  margin-right: 3.3em;
 }
 
 .inputContainer {
@@ -20,8 +21,30 @@
   border: none;
   margin-left: 0.7em;
   font-size: 1.3rem;
+  width: 100%;
 }
 
 .input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 512px) {
+  .container {
+    margin: 0 2em;
+    /* margin-right: 0; */
+  }
+
+  .inputContainer {
+    padding: 0.5em;
+    border-width: 1px;
+  }
+
+  .input {
+    font-size: 1rem;
+    margin-left: 0.4em;
+  }
+
+  .icon {
+    height: 1.2rem;
+  }
 }

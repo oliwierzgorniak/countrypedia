@@ -1,4 +1,4 @@
-h1 {
+.title {
   text-align: center;
   margin-bottom: 1.3em;
 }
@@ -8,4 +8,18 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2.2em 2em;
+  max-width: 90vw;
+  margin: auto;
+}
+
+@media screen and (max-width: 512px) {
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .container {
+    /* margin-right: 0; */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }

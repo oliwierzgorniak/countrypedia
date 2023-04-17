@@ -24,8 +24,7 @@ export default function Root() {
 
   return country ? (
     <>
-      <Back />
-      <h1>
+      <h1 className={styles.title}>
         {country} {getFlag(country)}
       </h1>
 
@@ -40,6 +39,7 @@ export default function Root() {
             />
           ))}
       </article>
+      <Back />
     </>
   ) : null;
 }

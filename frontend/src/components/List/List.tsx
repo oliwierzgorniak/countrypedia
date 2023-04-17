@@ -19,11 +19,11 @@ export default function List({ shownCountries, selectedElement }: ListProps) {
             navigate(`/country/${name}`);
           }}
           key={flag}
-          style={{ background: selectedElement === i ? "#bbb" : "unset" }}
+          style={{ background: selectedElement === i ? "#ddd" : "unset" }}
         >
-          <span>
+          <div className={styles.listContainer}>
             <span className={styles.flag}>{flag}</span> {name}
-          </span>
+          </div>
           {selectedElement === i && (
             <img src={enterSvg} className={styles.enter} alt="enter" />
           )}

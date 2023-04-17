@@ -6,3 +6,13 @@
   gap: 2.4em;
   max-width: 90vw;
 }
+
+.container img {
+  max-width: 90vw;
+}
+
+@media screen and (max-width: 512px) {
+  .container {
+    gap: 1.7em;
+  }
+}

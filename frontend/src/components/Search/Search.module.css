@@ -1,11 +1,13 @@
 .container {
   margin-left: 2em;
   margin-right: 3.3em;
+  max-width: 100%;
 }
 
 .inputContainer {
   border: 2px solid #171717;
   width: 40ch;
+  max-width: 100%;
   display: flex;
   align-items: center;
   padding: 0.8em 0.7em;

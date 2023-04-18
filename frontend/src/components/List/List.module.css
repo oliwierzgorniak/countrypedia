@@ -15,7 +15,7 @@
   border: 1px solid #171717;
   border-top: none;
   padding: 1em;
-  width: 100%;
+  max-width: 100%;
 }
 
 .list li:first-child {

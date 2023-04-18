@@ -15,10 +15,6 @@ const router = createBrowserRouter([
     path: "country/:country",
     element: <Country />,
   },
-  {
-    path: "loading",
-    element: <Loading />,
-  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

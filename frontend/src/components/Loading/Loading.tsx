@@ -1,5 +1,6 @@
-import styles from "./Loading.module.css";
+import styles from "./styles/Loading.module.css";
 import mapSvg from "../../assets/map.svg";
+import "./styles/animations.css";
 
 export default function Loading() {
   return (

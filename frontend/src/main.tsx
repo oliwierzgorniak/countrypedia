@@ -4,6 +4,7 @@ import Root from "./routes/Root/Root";
 import Country from "./routes/Country/Country";
 import "./styles/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Loading from "./components/Loading/Loading";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "country/:country",
     element: <Country />,
+  },
+  {
+    path: "loading",
+    element: <Loading />,
   },
 ]);
 

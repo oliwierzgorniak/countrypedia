@@ -1,0 +1,61 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.animationContainer {
+  position: relative;
+}
+
+.map {
+  width: 40vw;
+  max-width: 13rem;
+}
+
+.glass {
+  position: absolute;
+  font-size: 2rem;
+  animation: searching 7s linear infinite;
+}
+
+@keyframes searching {
+  10% {
+    transform: translateX(-3rem) translateY(1rem);
+  }
+
+  20% {
+    transform: translateX(-3rem) translateY(-3rem);
+  }
+
+  35% {
+    transform: translateX(-5rem) translateY(2.4rem);
+  }
+
+  52% {
+    transform: translateX(2.3rem) translateY(-2.3rem);
+  }
+
+  63% {
+    transform: translateX(1.3rem) translateY(1.5rem);
+  }
+
+  70% {
+    transform: translateX(0rem) translateY(4rem);
+  }
+
+  82% {
+    transform: translateX(5.7rem) translateY(2rem);
+  }
+
+  87% {
+    transform: translateX(5.3rem) translateY(3.4rem);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}

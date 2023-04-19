@@ -24,3 +24,8 @@ type CardData = {
     Currency: string | undefined;
   };
 };
+
+type HTTPError = {
+  message: string;
+  code: number;
+};

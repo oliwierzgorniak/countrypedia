@@ -10,13 +10,13 @@ app.use(cors());
 app.get("/", async (req, res) => {
   const country = req.query.country;
   if (typeof country !== "string") {
-    res.status(400).end("no country provided");
+    res.status(400).end("No country provided 🖋️");
     return;
   }
 
   const apiUrl = getApiUrl(country);
   if (typeof apiUrl !== "string") {
-    res.status(500).end("server error");
+    res.status(500).end("Server error 🤮"); // XD
     return;
   }
 
@@ -26,17 +26,16 @@ app.get("/", async (req, res) => {
     data = await dataReq.json();
   } catch (err) {
     console.error(err);
-    res.status(500).end("server error");
+    res.status(500).end("Server error 🤮");
     return;
   }
 
   if (data.status === 404) {
-    res.status(404).end("no country found");
+    res.status(404).end("No country found ❌");
     return;
   }
 
   res.json(getParsedData(data));
-  return;
 });
 
 app.listen(process.env.PORT, () => {

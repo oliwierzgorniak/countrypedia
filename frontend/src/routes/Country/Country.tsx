@@ -11,7 +11,6 @@ import Loading from "../../components/Loading/Loading";
 export default function Root() {
   const { country } = useParams();
   const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {

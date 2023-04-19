@@ -4,9 +4,13 @@ import Root from "./routes/Root/Root";
 import Country from "./routes/Country/Country";
 import "./styles/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Loading from "./components/Loading/Loading";
+import NotFound from "./routes/NotFound/NotFound";
 
 const router = createBrowserRouter([
+  {
+    path: "*",
+    element: <NotFound />,
+  },
   {
     path: "/",
     element: <Root />,

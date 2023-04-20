@@ -1,5 +1,5 @@
-import logoSvg from "../../assets/logo.svg";
 import Search from "../../components/Search/Search";
+import logoSvg from "../../assets/logo.svg";
 import styles from "./Root.module.css";
 
 export default function Root() {

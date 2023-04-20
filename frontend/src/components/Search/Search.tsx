@@ -1,15 +1,15 @@
-import magnifyingGlassSvg from "../../assets/magnifyingGlass.svg";
-import styles from "./Search.module.css";
 import { useState } from "react";
-import getNewShownCountries from "./func/getNewShownCountires";
-import List from "../List/List";
-import { N_LIST_ELEMENTS } from "../../consts";
 import { useNavigate } from "react-router-dom";
+import getNewShownCountries from "./func/getNewShownCountires";
 import handleEnter from "./func/handleEnter";
 import handleArrowsAndGetIndex from "./func/handleArrowsAngGetIndex";
+import { NUMBER_OF_LIST_ELEMENTS } from "../../consts";
+import List from "../List/List";
+import magnifyingGlassSvg from "../../assets/magnifyingGlass.svg";
+import styles from "./Search.module.css";
 
 export default function Search() {
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState<string>("");
   const [shownCountries, setShownCountries] = useState<Country[]>([]);
   const [selectedElement, setSelectedElement] = useState<number | null>(null);
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ export default function Search() {
         const index = handleArrowsAndGetIndex(e.code, selectedElement);
 
         if (typeof index !== "undefined")
-          setSelectedElement(index % N_LIST_ELEMENTS);
+          setSelectedElement(index % NUMBER_OF_LIST_ELEMENTS);
       }}
       className={styles.container}
     >

@@ -1,4 +1,5 @@
 import countries from "../../../assets/countries.json";
+import { NUMBER_OF_LIST_ELEMENTS } from "../../../consts";
 
 export default function getNewShownCountries(input: string): Country[] {
   if (input.length === 0) return [];
@@ -12,5 +13,5 @@ export default function getNewShownCountries(input: string): Country[] {
     }
   });
 
-  return filteredCountries.slice(0, 7);
+  return filteredCountries.slice(0, NUMBER_OF_LIST_ELEMENTS);
 }

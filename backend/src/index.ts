@@ -3,22 +3,14 @@ dotenv.config();
 import express from "express";
 import cors from "cors";
 import getParsedData from "./lib/getParsedData";
-import getApiUrl from "./lib/getApiUrl";
+import getAndHandleApiUrl from "./lib/getAndHandleApiUrl";
+
 const app = express();
 app.use(cors());
 
 app.get("/", async (req, res) => {
-  const country = req.query.country;
-  if (typeof country !== "string") {
-    res.status(400).end("No country provided 🖋️");
-    return;
-  }
-
-  const apiUrl = getApiUrl(country);
-  if (typeof apiUrl !== "string") {
-    res.status(500).end("Server error 🤮"); // XD
-    return;
-  }
+  const apiUrl = getAndHandleApiUrl(req, res);
+  if (!apiUrl) return;
 
   let data;
   try {
@@ -32,10 +24,9 @@ app.get("/", async (req, res) => {
 
   if (data.status === 404) {
     res.status(404).end("No country found ❌");
-    return;
+  } else {
+    res.json(getParsedData(data));
   }
-
-  res.json(getParsedData(data));
 });
 
 app.listen(process.env.PORT, () => {

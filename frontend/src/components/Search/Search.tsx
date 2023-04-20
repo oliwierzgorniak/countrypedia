@@ -30,6 +30,8 @@ export default function Search() {
           src={magnifyingGlassSvg}
           alt="magnifying glass"
           className={styles.icon}
+          width="21"
+          height="21"
         />
         <input
           value={searchInput}

@@ -29,7 +29,13 @@ export default function List({ shownCountries, selectedElement }: ListProps) {
             <span className={styles.flag}>{flag}</span> {name}
           </div>
           {selectedElement === i && (
-            <img src={enterSvg} className={styles.enter} alt="enter" />
+            <img
+              src={enterSvg}
+              className={styles.enter}
+              alt="enter"
+              width="24"
+              height="24"
+            />
           )}
         </li>
       ))}

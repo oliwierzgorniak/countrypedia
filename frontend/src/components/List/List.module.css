@@ -35,6 +35,7 @@
 .enter {
   display: block;
   max-height: 1.5rem;
+  aspect-ratio: 1;
 }
 
 @media screen and (max-width: 512px) {

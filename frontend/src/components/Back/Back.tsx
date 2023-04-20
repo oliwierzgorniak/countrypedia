@@ -14,7 +14,7 @@ export default function Back({ customStyle }: BackProps) {
       className={customStyle ? customStyle : styles.button}
       onClick={() => navigate("/")}
     >
-      <img src={arrowSvg}></img> go back
+      <img src={arrowSvg} width="22" height="16" /> go back
     </button>
   );
 }

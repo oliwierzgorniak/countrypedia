@@ -1,18 +1,8 @@
-.animation-enter,
-.animation-ap {
-  opacity: 0.01;
-}
-
-.animation-enter-active {
-  opacity: 1;
-  transition: all 0.4s ease-out;
-}
-
 .animation-exit {
-  opacity: 0.01;
-  transition: all 0.4s ease-out;
+  opacity: 1;
 }
 
 .animation-exit-active {
-  opacity: 1;
+  transition: all 0.4s ease-out;
+  opacity: 0.01;
 }

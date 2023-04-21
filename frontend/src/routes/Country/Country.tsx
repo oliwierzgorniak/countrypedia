@@ -21,11 +21,11 @@ export default function Root() {
   }, []);
 
   if (!country) return <Error message="No country provided ❌" />;
-  if (isLoading) return <Loading />;
   if (error) return <Error message={error.message} code={error.code} />;
 
   return (
     <>
+      <Loading isLoading={isLoading} />
       <h1 className={styles.title}>
         {country} {getFlag(country)}
       </h1>

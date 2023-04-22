@@ -20,8 +20,7 @@ export default function Search() {
         handleEnter(e.code, selectedElement, shownCountries, navigate);
         const index = handleArrowsAndGetIndex(e.code, selectedElement);
 
-        if (typeof index !== "undefined")
-          setSelectedElement(index % NUMBER_OF_LIST_ELEMENTS);
+        if (typeof index !== "undefined") setSelectedElement(index);
       }}
       className={styles.container}
     >

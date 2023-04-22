@@ -16,6 +16,8 @@
   border-top: none;
   padding: 1em;
   max-width: 100%;
+  position: relative;
+  z-index: -1;
 }
 
 .list li:first-child {

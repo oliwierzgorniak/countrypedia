@@ -1,5 +1,4 @@
 import styles from "./styles/Loading.module.css";
-import mapSvg from "../../assets/map.svg";
 import { CSSTransition } from "react-transition-group";
 import "./styles/animations.css";
 
@@ -19,7 +18,7 @@ export default function Loading({ isLoading }: Props) {
       <section className={styles.container}>
         <img
           className={styles.map}
-          src={mapSvg}
+          src="/map.svg"
           alt="map"
           width="512"
           height="512"

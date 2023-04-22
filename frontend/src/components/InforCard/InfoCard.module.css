@@ -1,11 +1,10 @@
 .card {
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.172);
-  padding: 1.8em 2.4em 1.7em 2.4em;
+  padding: 1.8em 2.4em 2em 2.4em;
   border-radius: 0.4em;
 }
 
 .card h2 {
-  /* text-align: center; */
   margin-top: 0;
 }
 
@@ -16,12 +15,11 @@
 .card li {
   list-style: none;
   margin-bottom: 0.2em;
-  max-width: 20ch;
+  max-width: 21ch;
 }
 
 .key {
   font-weight: 500;
-  /* margin-right: 0.2em; */
 }
 
 .information {

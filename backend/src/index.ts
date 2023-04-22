@@ -49,8 +49,6 @@ app.get("/", async (req, res) => {
     return;
   }
 
-  console.log(data);
-
   if (data.status === 404 || data.message === "Page Not Found") {
     res.status(404).end("No country found ❌");
   } else {

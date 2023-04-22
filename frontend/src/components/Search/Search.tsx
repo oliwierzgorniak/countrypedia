@@ -24,7 +24,13 @@ export default function Search() {
       }}
       className={styles.container}
     >
-      <div className={styles.inputContainer}>
+      <div
+        style={{
+          borderBottomRightRadius: !!shownCountries.length ? 0 : "0.3em",
+          borderBottomLeftRadius: !!shownCountries.length ? 0 : "0.3em",
+        }}
+        className={styles.inputContainer}
+      >
         <img
           src={magnifyingGlassSvg}
           alt="magnifying glass"

@@ -17,6 +17,30 @@
 .icon {
   max-height: 2em;
   display: block;
+  animation: wiggling 4s infinite;
+  margin-left: 0.15em;
+}
+
+@keyframes wiggling {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  2.5% {
+    transform: rotate(10deg);
+  }
+
+  5% {
+    transform: rotate(-2deg);
+  }
+
+  10% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .input {

@@ -49,13 +49,15 @@ app.get("/", async (req, res) => {
     return;
   }
 
-  if (data.status === 404) {
+  console.log(data);
+
+  if (data.status === 404 || data.message === "Page Not Found") {
     res.status(404).end("No country found ❌");
   } else {
     res.json(getParsedData(data));
   }
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
   console.log(`server is running on port: ${process.env.PORT} 🚀`);
 });

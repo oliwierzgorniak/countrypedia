@@ -1,1 +1,1 @@
-GET http://localhost:3000?country=Barbados HTTP/1.1
+GET http://localhost:3000?country= HTTP/1.1

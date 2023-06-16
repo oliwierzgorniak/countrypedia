@@ -9,8 +9,6 @@ Backend service: [https://countrypedia.onrender.com/](https://countrypedia.onren
 
 This project is a coding challange, which is part of the hiring process for Software Engineer Intern role at [bounce Insights](https://bounceinsights.com/). It is a simple react application which shows information about countries provided by an express server, which connects with [REST Countries](https://restcountries.com) API.
 
----
-
 ## How to run
 
 ### Prerequisites
@@ -48,8 +46,6 @@ or for production version:
 npm run build
 npm run preview
 ```
-
----
 
 ## How to use
 

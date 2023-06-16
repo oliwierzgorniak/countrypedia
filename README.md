@@ -54,3 +54,7 @@ npm run preview
 ## How to use
 
 Using the application is quite intuitive. You should use the search tool on the main page by typing in a text and selecting a country. You can select it using a mouse or you can use arrows to jump between options and accept your selection with an enter key.
+
+## Build dependencies
+
+To see names and licenses of packages used in the building process go to [dependencies.txt](https://countrypedia-zgorniak.netlify.app/dependencies.txt).
